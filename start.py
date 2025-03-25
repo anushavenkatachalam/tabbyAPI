@@ -50,10 +50,7 @@ def get_install_features(lib_name: str = None):
             "B": {"pretty": "NVIDIA Cuda 11.8 (Unsupported)", "internal": "cu118"},
             "C": {"pretty": "AMD", "internal": "amd"},
         }
-        user_input = get_user_choice(
-            "Select your GPU. If you don't know, select Cuda 12.x (A)",
-            gpu_lib_choices,
-        )
+        user_input = 'A'
 
         lib_name = gpu_lib_choices.get(user_input, {}).get("internal")
 
